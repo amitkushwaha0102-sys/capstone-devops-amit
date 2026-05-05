@@ -22,4 +22,4 @@ variable "frontend_bucket_name" {
 variable "alert_email" {
   description = "Email for SNS notifications"
   type        = string
-}
+}# updated
