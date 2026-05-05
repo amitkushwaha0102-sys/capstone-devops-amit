@@ -23,3 +23,4 @@ variable "alert_email" {
   description = "Email for SNS notifications"
   type        = string
 }# updated
+# trigger
