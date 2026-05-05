@@ -26,6 +26,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Zip Lambda 1
+        run: |
+          cd backend/generate-presigned-url
+          zip -r lambda.zip .
+
+      - name: Zip Lambda 2
+        run: |
+          cd backend/process-uploaded-file
+          zip -r lambda.zip .
+
       - name: Terraform Init
         working-directory: infra/terraform
         run: terraform init
