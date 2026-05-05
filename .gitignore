@@ -1,0 +1,16 @@
+cd /mnt/d/Capston_project
+
+cat > .gitignore << 'EOF'
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Lambda ZIPs
+backend/**/lambda.zip
+
+# AWS credentials
+*.pem
+.env
+EOF
